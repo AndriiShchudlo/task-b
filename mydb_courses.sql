@@ -31,7 +31,7 @@ CREATE TABLE `courses` (
   PRIMARY KEY (`id_course`),
   KEY `tag_idx` (`tag`),
   CONSTRAINT `tag` FOREIGN KEY (`tag`) REFERENCES `tags` (`id_tag`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `courses` (
 
 LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
-INSERT INTO `courses` VALUES (1,'drawing',1,'2015-12-18','2017-11-25'),(2,'web programing fundamentals',3,'2016-12-30','2017-05-15'),(3,'algebra equations solving',2,'2016-12-25','2017-06-10'),(4,'geometry',2,'2016-11-26','2018-11-10'),(5,'music',1,'2016-11-20','2017-12-15');
+INSERT INTO `courses` VALUES (1,'drawing',1,'2015-12-18','2017-11-25'),(2,'web programing fundamentals',3,'2016-12-30','2017-05-15'),(3,'algebra equations solving',2,'2016-12-25','2017-06-10'),(4,'geometry',2,'2016-11-26','2018-11-10'),(5,'music',1,'2016-11-20','2017-12-15'),(6,'football',4,'2015-11-20','2018-10-10');
 /*!40000 ALTER TABLE `courses` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-15 15:06:24
+-- Dump completed on 2016-11-18  0:37:29

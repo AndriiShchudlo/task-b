@@ -26,9 +26,11 @@ CREATE TABLE `groups` (
   `id_groups` int(11) NOT NULL AUTO_INCREMENT,
   `person` int(11) NOT NULL,
   `course` int(11) NOT NULL,
+  `tag` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_groups`),
   KEY `persons_idx` (`person`),
   KEY `course_idx` (`course`),
+  KEY `tag_idx` (`tag`),
   CONSTRAINT `course` FOREIGN KEY (`course`) REFERENCES `courses` (`id_course`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `person` FOREIGN KEY (`person`) REFERENCES `persons` (`id_person`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
@@ -40,7 +42,7 @@ CREATE TABLE `groups` (
 
 LOCK TABLES `groups` WRITE;
 /*!40000 ALTER TABLE `groups` DISABLE KEYS */;
-INSERT INTO `groups` VALUES (1,1,2),(2,2,3),(3,3,1),(4,4,1);
+INSERT INTO `groups` VALUES (1,1,2,NULL),(2,2,3,NULL),(3,3,1,NULL),(4,4,1,NULL);
 /*!40000 ALTER TABLE `groups` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-15 15:06:24
+-- Dump completed on 2016-11-18  0:37:29

@@ -27,7 +27,7 @@ CREATE TABLE `tags` (
   `tag` varchar(45) NOT NULL,
   PRIMARY KEY (`id_tag`),
   UNIQUE KEY `tag_UNIQUE` (`tag`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `tags` (
 
 LOCK TABLES `tags` WRITE;
 /*!40000 ALTER TABLE `tags` DISABLE KEYS */;
-INSERT INTO `tags` VALUES (1,'art'),(2,'mathematies'),(3,'software engineering');
+INSERT INTO `tags` VALUES (1,'art'),(5,'computer graphics'),(2,'mathematies'),(3,'software engineering'),(4,'sport');
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-15 15:06:24
+-- Dump completed on 2016-11-18  0:37:29
